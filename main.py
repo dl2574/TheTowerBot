@@ -1,7 +1,12 @@
 # Build a Bot to farm Coins in The Tower game.
+import pyautogui
 
 def main():
-    pass
+    pyautogui.sleep(3)
+    battle_btn = pyautogui.locateCenterOnScreen("./assets/images/btn_Battle.png")
+    if battle_btn != None:
+        pyautogui.moveTo(battle_btn)
+        pyautogui.click()
 
 
 
