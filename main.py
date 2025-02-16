@@ -19,12 +19,33 @@ def main():
 
 
     while True:
+        gem_btn = None
+        float_btn = None
         retry_btn = None
+
         try:
-            retry_btn = pyautogui.locateCenterOnScreen("./assets/images/btn_Retry.png", confidence=0.8)
+            gem_btn = pyautogui.locateCenterOnScreen("./assets/images/btn_5_gem.png", confidence=0.8)
+        except:
+            print("No Gems.")
+
+        try:
+            float_btn = pyautogui.locateCenterOnScreen("./assets/images/btn_float_gem.png", confidence=0.8)
+        except:
+            print("No Gems.")
+
+        try:
+            retry_btn = pyautogui.locateCenterOnScreen("./assets/images/btn_Retry.png", confidence=0.8)  
         except:
             print("Retry Button not found. Sleeping...")
 
+        if gem_btn != None:
+            pyautogui.moveTo(gem_btn)
+            pyautogui.click()
+
+        if float_btn != None:
+            pyautogui.moveTo(float_btn)
+            pyautogui.click()
+    
         if retry_btn != None:
             pyautogui.moveTo(retry_btn)
             pyautogui.click()
