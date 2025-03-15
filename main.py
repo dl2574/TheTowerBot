@@ -38,6 +38,7 @@ def main():
             else:
                 pyautogui.moveTo(3180, 470)
             pyautogui.scroll(100)
+            pyautogui.sleep(1)
             pyautogui.click()         
 
         pyautogui.sleep(base_reset_time)
