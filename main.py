@@ -37,7 +37,7 @@ def main():
                 pyautogui.move(0, -160)
             else:
                 pyautogui.moveTo(3180, 470)
-            pyautogui.scroll(100)
+            pyautogui.scroll(200)
             pyautogui.sleep(1)
             pyautogui.click()         
 
